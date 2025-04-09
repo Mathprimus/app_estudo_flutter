@@ -35,7 +35,7 @@ class _MenuScreenState extends State<MenuScreen> {
               title: Text('Botões'),
               onTap: () {
                 // Navegar ou fazer algo
-                Navigator.pop(context); // Fecha o Drawer
+                Navigator.pushNamed(context, 'botoes');
               },
             ),
             ListTile(
