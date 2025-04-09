@@ -1,3 +1,4 @@
+import 'package:app_estudo_flutter/screens/exemplos/botoes/elevated.dart';
 import 'package:app_estudo_flutter/screens/exemplos/button_screen.dart';
 import 'package:app_estudo_flutter/screens/menu_screen.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,8 @@ class _MyAppState extends State<MyApp> {
       initialRoute: 'Menu',
       routes: {
         'Menu': (context) => MenuScreen(),
-        'botoes': (context) => ButtonScreen()
+        'botoes': (context) => ButtonScreen(),
+        'elevated': (context) => ElevatedScreen()
       },
     );
   }

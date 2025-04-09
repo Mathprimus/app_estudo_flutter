@@ -30,7 +30,9 @@ class _ButtonScreenState extends State<ButtonScreen> {
                 children: [Text("Aqui temos o Elevated Button")],
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, 'elevated');
+                },
                 child: Text('Confirmar'),
               ),
               SizedBox(height: 25),
