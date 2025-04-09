@@ -1,3 +1,4 @@
+import 'package:app_estudo_flutter/screens/menu_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +15,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: 'Menu',
+      routes: {'Menu': (context) => MenuScreen()},
+    );
   }
 }
