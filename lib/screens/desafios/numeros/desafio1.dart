@@ -8,6 +8,8 @@ class Desafio1 extends StatefulWidget {
 }
 
 class _Desafio1State extends State<Desafio1> {
+  int numero = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,8 +17,55 @@ class _Desafio1State extends State<Desafio1> {
         title: Text("Desafio1"),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [],
+        child: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 100,
+              ),
+              if (numero > 0)
+                Text(
+                  numero.toString(),
+                  style: TextStyle(color: Colors.blue),
+                ),
+              if (numero < 0)
+                Text(
+                  numero.toString(),
+                  style: TextStyle(color: Colors.red),
+                ),
+              if (numero == 0)
+                Text(
+                  numero.toString(),
+                  style: TextStyle(color: Colors.black),
+                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          numero--;
+                        });
+                      },
+                      child: Text("Diminuir")),
+                  ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          numero++;
+                        });
+                      },
+                      child: Text("Aumentar")),
+                ],
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      numero = 0;
+                    });
+                  },
+                  child: Text("Zerar")),
+            ],
+          ),
         ),
       ),
     );
