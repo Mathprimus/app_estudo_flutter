@@ -1,3 +1,4 @@
+import 'package:app_estudo_flutter/screens/desafios/desafios_sreen.dart';
 import 'package:flutter/material.dart';
 
 class MenuScreen extends StatefulWidget {
@@ -43,7 +44,8 @@ class _MenuScreenState extends State<MenuScreen> {
               title: Text('Desafios'),
               onTap: () {
                 // Navegar ou fazer algo
-                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DesafiosSreen()));
               },
             ),
             ListTile(

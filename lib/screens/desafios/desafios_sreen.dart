@@ -11,22 +11,30 @@ class DesafiosSreen extends StatefulWidget {
 class _DesafiosSreenState extends State<DesafiosSreen> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Scaffold(
-        appBar: AppBar(title: Text("Desafios")),
-        body: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
+    return Scaffold(
+      appBar: AppBar(title: Text("Desafios")),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Desafio1()));
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Desafio1(),
+                        ),
+                      );
                     },
-                    child: Text("Desafio 1")),
-              )
-            ],
+                    child: Text("Desafio 1"),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
