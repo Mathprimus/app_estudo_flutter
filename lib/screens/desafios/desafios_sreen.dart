@@ -4,6 +4,7 @@ import 'package:app_estudo_flutter/screens/desafios/numeros/desafio2.dart';
 import 'package:app_estudo_flutter/screens/desafios/numeros/desafio2_prof.dart';
 import 'package:app_estudo_flutter/screens/desafios/numeros/desafio3.dart';
 import 'package:app_estudo_flutter/screens/desafios/numeros/desafio3_ref.dart';
+import 'package:app_estudo_flutter/screens/desafios/numeros/desafio4.dart';
 import 'package:flutter/material.dart';
 
 class DesafiosSreen extends StatefulWidget {
@@ -107,6 +108,20 @@ class _DesafiosSreenState extends State<DesafiosSreen> {
                       );
                     },
                     child: Text("Desafio 3 reforço"),
+                  ),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Desafio4(),
+                        ),
+                      );
+                    },
+                    child: Text("Desafio 4"),
                   ),
                 ),
               ],
