@@ -39,8 +39,8 @@ class _MenuScreenState extends State<MenuScreen> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.person),
-              title: Text('Perfil'),
+              leading: Icon(Icons.shield),
+              title: Text('Desafios'),
               onTap: () {
                 // Navegar ou fazer algo
                 Navigator.pop(context);
